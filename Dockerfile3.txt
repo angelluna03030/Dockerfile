@@ -1,0 +1,2 @@
+/*es para ver todos no importa si no esta activos o no los contenedores */
+ docker ps -a

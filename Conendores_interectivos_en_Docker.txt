@@ -1,0 +1,6 @@
+/*para para poner a correr un contenedor y utilizar de una */
+ docker run -i -t Ubuntu bash
+
+/*para volver a ejecutar el container */
+
+ docker start 3021edc3b010 /* <---El id del container */

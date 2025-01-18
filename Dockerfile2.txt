@@ -1,3 +1,8 @@
 para crear un contenedor utilice este comendo 
 
 /*  docker run -d nginx:1.15.7 */
+para ejecutar algo cuando esto esta corriendo el contenedor 
+aquí estoy ejecutando nginx con el id 505ad89a65a2 el bash 
+/* docker exec -it 505ad89a65a2 bash  */
+
+
