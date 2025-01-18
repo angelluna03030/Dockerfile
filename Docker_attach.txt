@@ -1,0 +1,24 @@
+/*Para acceder a un contenedor para esta encendido el siguiente comando*/
+/*El attach  y el id del contenedor*/
+Docker attach 1b94
+
+//----------------------------------------------------------------------
+
+angelluna031120@Angel:~$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                       PORTS     NAMES
+4315a090a5c2   ubuntu    "/bin/bash"   15 minutes ago   Exited (0) 4 minutes ago               ANGEL
+29678cb3e726   ubuntu    "/bin/bash"   16 minutes ago   Exited (0) 15 minutes ago              ANGEL-it
+f67c0f5f7b71   ubuntu    "bash"        21 minutes ago   Exited (0) 21 minutes ago              brave_moore
+3021edc3b010   ubuntu    "bash"        7 hours ago      Exited (137) 6 minutes ago             wizardly_gates
+1b948f30b4b8   ubuntu    "/bin/bash"   8 hours ago      Exited (0) 8 hours ago                 quizzical_torvalds
+angelluna031120@Angel:~$ docker start 1b94
+1b94
+angelluna031120@Angel:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND       CREATED       STATUS         PORTS     NAMES
+1b948f30b4b8   ubuntu    "/bin/bash"   8 hours ago   Up 3 seconds             quizzical_torvalds
+angelluna031120@Angel:~$ docker attach 1b94
+root@1b948f30b4b8:/# exit
+exit
+angelluna031120@Angel:~$
+
+---------------------------------------------------------------------------//
