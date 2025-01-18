@@ -1,0 +1,29 @@
+/*es muy sencillo solo quedemos colocar el siguiente comando */
+/*debemos colocar el id o los primeros 3 caracteres del id*/
+Docker stop RT5
+
+/*para que se encienda el contenedor es uy fácil el siguiente comando */
+
+docker start 3021
+
+
+un ejemplo mas claro en código 
+//------------------------------------------------------------------------//
+angelluna031120@Angel:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+angelluna031120@Angel:~$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                            PORTS     NAMES
+4315a090a5c2   ubuntu    "/bin/bash"   9 minutes ago    Exited (0) 9 minutes ago                    ANGEL
+29678cb3e726   ubuntu    "/bin/bash"   10 minutes ago   Exited (0) 10 minutes ago                   ANGEL-it
+f67c0f5f7b71   ubuntu    "bash"        15 minutes ago   Exited (0) 15 minutes ago                   brave_moore
+3021edc3b010   ubuntu    "bash"        7 hours ago      Exited (137) About a minute ago             wizardly_gates
+1b948f30b4b8   ubuntu    "/bin/bash"   8 hours ago      Exited (0) 8 hours ago                      quizzical_torvalds
+angelluna031120@Angel:~$ docker start 4315
+4315
+angelluna031120@Angel:~$ docker attach 4315
+root@4315a090a5c2:/# exit
+exit
+angelluna031120@Angel:~$ docker stop 4315
+4315
+angelluna031120@Angel:~$
+//--------------------------------------------------------------------------//
