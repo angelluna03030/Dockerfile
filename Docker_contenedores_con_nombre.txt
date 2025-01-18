@@ -1,0 +1,3 @@
+/*Para crear un contenedor con el nombre que debe colocar lo siguente --name El_nombre_del_contendor*/
+
+docker run --name ANGEL -it ubuntu
