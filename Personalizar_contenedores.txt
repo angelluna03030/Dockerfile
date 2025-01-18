@@ -1,0 +1,7 @@
+/*contedor interatibo */
+
+Docker run -it Ubuntu /bin/bash
+
+/Ya estaría ejecutado el Ubuntu /
+
+root@63355453daf9:/#
