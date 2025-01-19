@@ -1,0 +1,8 @@
+/*Forzar la Eliminación e los contenedores de Docker */
+
+docker rm $(docker ps -aq)
+
+
+/*Forzar la Eliminación e los images de Docker */
+
+docker rmi $(docker images -q)
