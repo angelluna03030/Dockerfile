@@ -1,0 +1,33 @@
+/*para crear un imagen apartir del un Dockerfali es el siguiente  comando */
+/*donde se le especifica el nombre de la imagen y el directorio de  donde esta la imagen*/
+
+docker build -t miweb /home/angelluna031120/clase-Docker
+
+
+
+//-------------------------------------------------------------------------------
+
+angelluna031120@Angel:/$ ls
+Docker  dev   init   lib64       media  proc  sbin  sys  var
+bin     etc   lib    libx32      mnt    root  snap  tmp
+boot    home  lib32  lost+found  opt    run   srv   usr
+angelluna031120@Angel:/$ cd home
+angelluna031120@Angel:/home$ ls
+angelluna031120
+angelluna031120@Angel:/home$ ls
+angelluna031120
+angelluna031120@Angel:/home$ cd angelluna031120/
+angelluna031120@Angel:~$ ls
+Dockerfile  clase-docker   docker-clase27  helloword
+app-nginx   docker-clase2  docker-udemy    index.html
+angelluna031120@Angel:~$ cd clase-docker/
+angelluna031120@Angel:~/clase-docker$  docker build -t miweb /home/angelluna031120/clase-docker
+failed to fetch metadata: fork/exec /usr/local/lib/docker/cli-plugins/docker-buildx: no such file or directory
+
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+---------------------------------------------------------------------------------//
+
+
+
