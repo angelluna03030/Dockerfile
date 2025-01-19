@@ -1,0 +1,24 @@
+/*para crear imagen de un contendor es el siguiente comando*/
+/*los parámetros que le debemos pasar son el id de contenedor el nombre que le quiero poner la imagen */
+
+docker commit f47a2186bc6d ubutuimageco
+
+//--------------------------------------------------------------------------
+angelluna031120@Angel:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND       CREATED              STATUS              PORTS     NAMES
+f47a2186bc6d   ubuntu    "/bin/bash"   About a minute ago   Up About a minute             mystifying_pike
+angelluna031120@Angel:~$ docker commit f47a2186bc6d ubutuimagecontenedor
+sha256:b9f41065809d290b69933770fc976c0f43b5388d260c8b87193e1b53d6a1dfa0
+angelluna031120@Angel:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS         PORTS     NAMES
+f47a2186bc6d   ubuntu    "/bin/bash"   2 minutes ago   Up 2 minutes             mystifying_pike
+angelluna031120@Angel:~$ docker images
+REPOSITORY             TAG       IMAGE ID       CREATED          SIZE
+ubutuimagecontenedor   latest    b9f41065809d   10 seconds ago   123MB
+ubuntu                 latest    b1d9df8ab815   2 months ago     78.1MB
+angelluna031120@Angel:~$ docker run -it ubutuimagecontenedor
+root@751e57938b97:/# exit
+exit
+angelluna031120@Angel:~$ docker run -it ubutuimagecontenedor
+root@834733c9f061:/# ls
+-----------------------------------------------------------------------------//
