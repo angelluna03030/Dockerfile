@@ -1,0 +1,50 @@
+/*
+como funcionar el Docker compus: 
+
+se puede configurar todos en un Docker compus desde los imágenes que vamos a utilizar los puerto que vamos a utilizar, las newtwords las configuraciones los variables secretas los paquetes y demás. 
+*/
+
+/*comando mas utilizados */
+
+
+esto es para un fichero o archivo en concreto que termine en .yml
+
+Docker compose -t nombre_del_fichero.yml up
+
+esto es para ejecutar Docker compuse en segundo plano 
+
+ docker compose up -d
+
+para eliminar los Docker compose 
+
+docker compose down
+
+
+un Docker compose mas avanzado 
+version: '3.8'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:latest
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
