@@ -1,0 +1,45 @@
+/*Docker swarm */
+
+
+/*para inicializarlo se utiliza l siguiente comando*/
+
+Docker swarm init
+
+/*Para detenerlo*/
+
+ docker swarm leave --force 
+
+
+/*aqui inicio Docker swarm con mi dirección ip*/
+
+docker swarm init --advertise-addr 172.19.0.1
+
+
+/*aquí hago 5 reclicas de nginx*/
+
+docker service create --name nombre_del_servicio --replicas 5 nginx
+
+
+"para que necesito hacer 5 replicas de nginx --> imagina que tiene un app con mucha carga de trabajo pues la carga de trabaja de dividiría entre los 5 nginx que tenemos en el servidor"
+
+/*para saber los comandos de Docker service */
+
+ docker service COMMAND
+
+/*para elimírnarlo */
+
+ docker service rm nombre_del_servicio
+
+/*para n escalamiento rápido de se utiliza */
+
+ docker service scale nombre_del_servicio=10
+
+/*esta pensado para utilizarse en cliente en plena ejecución sin detener nada un ejemplo es el siguiente comando  */
+
+
+docker service update --image ubuntu/apache2 nombre_del_servicio
+
+
+/*para volver a un versión anterior por si algo llegara a pasar se utiliza el siguiente comando */
+
+docker service rollback nombre_del_servicio
